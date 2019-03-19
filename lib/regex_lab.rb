@@ -14,6 +14,10 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   text.match(/\b\A[:upper:]\z[:punct:]\b/) ? true : false
 end
 
+def first_word_capitalized_and_ends_with_punctuation?(text)
+  text.match(/^[A-Z].+[\.!?]$/) ? true : false
+end
+
 def valid_phone_number?(phone)
   phone.match(/\b(\d\d\d)-(\d\d\d)-(\d\d\d)\b/) ? true : false
 end
